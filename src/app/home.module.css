@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 98px;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 30px;
+} 
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.button {
+  min-width: 110px;
+  padding: 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.button:first-child {
+  background-color: var(--btn);
+  color: #fff;
+}
+
+.brands {
+  width: 500px;
+  height: 50px;
+  position: relative;
+  filter: grayscale(1);
+}
+
+
+.imageCon {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
