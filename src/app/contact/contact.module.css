@@ -28,7 +28,7 @@
 
 .inputForm {
   color: var(--text);
-  background-color: var(--bfSoft);
+  background-color: var(--bgSoft);
   padding: 20px;
   border-radius: 5px;
 }
@@ -41,4 +41,32 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formContainer {
+      width: 500px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .formContainer {
+      width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .formContainer {
+      width: 400px;
+  }
+} 
+@media (max-width: 400px) {
+  .formContainer {
+      width: 300px;
+  }
 }

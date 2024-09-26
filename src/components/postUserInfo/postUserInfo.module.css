@@ -1,0 +1,11 @@
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoTitle {
+  color: gray;
+  font-weight: bold;
+}

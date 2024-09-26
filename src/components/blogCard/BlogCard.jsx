@@ -2,9 +2,8 @@ import Image from 'next/image'
 import styles from './blogCard.module.css'
 import Link from 'next/link'
 
+export default function BlogCard({post}) {
 
-
-export default function BlogCard() {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -19,10 +18,10 @@ export default function BlogCard() {
         <span className={styles.date}>12/10/2024</span>
       </div>
       <div className={styles.bottom}>
-        <h2>Title</h2>
-        <p className={styles.desc} >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quidem ad autem ullam eligendi? Pariatur repellendus sed dolorum at unde consequatur impedit quaerat, corrupti, commodi excepturi obcaecati atque tenetur esse.</p>
-        <Link href='/'>
-          <button className={styles.button} >READ MORE</button>
+        <h2>{post.title}</h2>
+        <p className={styles.desc} >{post.body}</p>
+        <Link href={`/blog/${post.id}`}>
+          <button className={styles.button}>READ MORE</button>
         </Link>
       </div>
     </div>

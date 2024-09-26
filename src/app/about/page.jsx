@@ -1,8 +1,16 @@
+'use client'
 import Image from "next/image";
 
 import styles from './about.module.css'
+import { useParams, useSearchParams } from "next/navigation";
 
 export default function AboutPage() {
+  const params = useParams()
+  const searchParams = useSearchParams()
+
+  console.log('PARAMS: ', params)
+  console.log('SEARCH-PARAMS: ', searchParams.get('q'))
+
   return (
     <div className={styles.container}>
       <section className={styles.textCon}>

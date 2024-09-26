@@ -8,5 +8,6 @@
 
 .active {
   background-color: var(--text);
-  color: var(--bg); 
+  color: var(--bg);
+  font-weight: bold;
 }
