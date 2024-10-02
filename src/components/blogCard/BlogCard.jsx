@@ -9,13 +9,13 @@ export default function BlogCard({post}) {
       <div className={styles.top}>
         <div className={styles.imgCont}>
           <Image
-            src='https://images.pexels.com/photos/15442329/pexels-photo-15442329/free-photo-of-mascota-sentado-rock-roca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            src={post.img}
             alt='Post card'
             fill
             className={styles.img}
           />
         </div>
-        <span className={styles.date}>12/10/2024</span>
+        <span className={styles.date}>{post.createdAt.toString().slice(4,16)}</span>
       </div>
       <div className={styles.bottom}>
         <h2>{post.title}</h2>
