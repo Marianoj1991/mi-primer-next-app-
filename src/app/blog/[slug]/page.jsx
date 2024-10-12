@@ -2,16 +2,16 @@ import Image from 'next/image'
 import styles from './singlePost.module.css'
 import PostUserInfo from '@/components/postUserInfo/PostUserInfo'
 import { Suspense } from 'react'
-import { getPostById } from '@/lib/data'
+// import { getPostById } from '@/lib/data'
 
-// const getPost = async (id) => {
-//   const resp = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {cache: 'no-store'})
-//   if (!resp.ok) {
-//     throw new Error('Something went wrong fetching data')
-//   }
+const getPostById = async (id) => {
+  const resp = await fetch(`http://localhost:3000/api/blog/${id}`, {cache: 'no-store'})
+  if (!resp.ok) {
+    throw new Error('Something went wrong fetching data')
+  }
 
-//   return resp.json()
-// }
+  return resp.json()
+}
 
 export default async function SinglePostPage({ params }) {
   const { slug } = params

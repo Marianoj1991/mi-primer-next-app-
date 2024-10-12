@@ -1,15 +1,15 @@
 import BlogCard from '@/components/blogCard/BlogCard'
 import styles from './blog.module.css'
-import { getPosts } from '@/lib/data'
+// import { getPosts } from '@/lib/data'
 
-// const getPosts = async () => {
-//   const resp = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-//   if (!resp.ok) {
-//     throw new Error('Something went wrong fetching data')
-//   }
+const getPosts = async () => {
+  const resp = await fetch(`http://localhost:3000/api/blog`)
+  if (!resp.ok) {
+    throw new Error('Something went wrong fetching data')
+  }
 
-//   return resp.json()
-// }
+  return resp.json()
+}
 
 export default async function BlogPage() {
   const posts = await getPosts()

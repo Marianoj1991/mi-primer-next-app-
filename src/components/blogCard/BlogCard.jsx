@@ -15,12 +15,12 @@ export default function BlogCard({post}) {
             className={styles.img}
           />
         </div>
-        <span className={styles.date}>{post.createdAt.toString().slice(4,16)}</span>
+        <span className={styles.date}> {post.createdAt.toString().slice(4,16)} </span>
       </div>
       <div className={styles.bottom}>
         <h2>{post.title}</h2>
         <p className={styles.desc} >{post.body}</p>
-        <Link href={`/blog/${post.id}`}>
+        <Link href={`/blog/${post._id}`}>
           <button className={styles.button}>READ MORE</button>
         </Link>
       </div>
